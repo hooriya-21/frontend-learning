@@ -1,0 +1,95 @@
+
+/* Main notification popup container */
+.notification-popup {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+
+    width: 100%;
+    padding: 14px 16px;
+
+    background: var(--color-surface, #ffffff);
+    color: var(--color-text, #0f172a);
+
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-left: 4px solid #6366f1;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Incident notification style */
+.notification-popup--incident {
+    border-left-color: #ef4444;
+}
+
+/* Warning notification style */
+.notification-popup--warning {
+    border-left-color: #f59e0b;
+}
+
+/* Successful notification style */
+.notification-popup--success {
+    border-left-color: #10b981;
+}
+
+/* Notification text container */
+.notification-popup__content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Notification title */
+.notification-popup__title {
+    display: block;
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Notification message */
+.notification-popup__message {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--color-text-secondary, #475569);
+
+    overflow-wrap: anywhere;
+}
+
+/* Close button */
+.notification-popup__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    padding: 0;
+
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+
+    color: var(--color-text-secondary, #64748b);
+    font-size: 20px;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Hover effect for the close button */
+.notification-popup__close:hover {
+    background: var(--color-hover, #f1f5f9);
+    color: var(--color-text, #0f172a);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    .notification-popup {
+        padding: 12px;
+    }
+}
